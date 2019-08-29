@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="cicd-new-test-suite.xml" />
+	<munit:test name="cicd-new-test-suite-cicdsampleFlowTest" doc:id="17e8226f-7b8e-467f-ade7-ebe66681fa84" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to cicdsampleFlow" doc:id="1e5938e7-0ca3-4927-a521-100861145868" name="cicdsampleFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-equals doc:name="Assert equals" doc:id="bd6c376f-b208-4b57-b27b-557b65e01298" actual="#['sreekar test']" expected="#['sreekar test']" message="#['sreekar test']"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
